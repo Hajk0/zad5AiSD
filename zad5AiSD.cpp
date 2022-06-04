@@ -46,6 +46,7 @@ int main()
             //cin  >> n >> poj;
             n = cinInt();
             poj = cinInt();
+
             wagi = new int[n];//
             wartosci = new int[n];//
             cout << "Podaj wagi i wartosci przedmiowow:\n";
@@ -81,7 +82,7 @@ int main()
     }
     else
     {
-        cout << "Program nie obsluguje podanej operacji, wybierz jeszcze raz lub zakończ program.\n";
+        cout << "Program nie obsluguje podanej operacji, wybierz jeszcze raz lub zakoñcz program.\n";
     }*/
     cout << "Przedmioty indeksowane od 1.\n\nAlgorytm programowania dynamicznego:\n";
     int *rozwiazanie = nullptr;
@@ -305,11 +306,12 @@ void decToBin(int x, bool *tab)
 int cinInt()
 {
     int x;
-    while(!(cin >> x))
+    while(!(cin >> x) || x < 0)
     {
+
         cin.clear();
         cin.sync();
-        cout << "Podaj liczbe: \n";
+        cout << "Podaj liczbe dodatnia: \n";
     }
     return x;
 }
